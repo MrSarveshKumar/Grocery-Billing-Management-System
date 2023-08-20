@@ -1,0 +1,178 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Gill Sans", "Gill Sans MT",
+    Calibri, "Trebuchet MS", sans-serif;
+  background-image: url("/static/assests/bg.jpg");
+  font-size: 25px;
+}
+
+section.left {
+  position: absolute;
+  width: 40%;
+  height: 70%;
+  top: 15%;
+  left: 5%;
+  border-radius: 50px;
+  backdrop-filter: blur(20px) grayscale(40%);
+  background-color: #e9f3ed9a;
+}
+
+div.heading h1 {
+  position: absolute;
+  width: 40%;
+  left: 4%;
+  text-align: center;
+  background-color: #fbd5c8;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+ul {
+  list-style: none;
+}
+section.left ul.row li {
+  background: #47c98e;
+  border-radius: 24px;
+  padding: 1rem;
+  width: 20%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+}
+ul.row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  font-size: 20px;
+}
+ul.input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.left ul.input li {
+  border-radius: 24px;
+  padding: 1em;
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.forminput {
+  border-radius: 5px;
+  border-style: none;
+  text-align: center;
+  font-weight: 800;
+  background-color: #d3edf5;
+  color: #0250c3;
+  height: 40px;
+  width: 110px;
+}
+section.right {
+  position: absolute;
+  width: 55%;
+  margin-left: 45%;
+  height: 100%;
+  padding: 0;
+}
+section.right div table {
+  margin-right: auto;
+  margin-left: auto;
+}
+section.left ul.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.left ul.buttons li {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+}
+
+section.left ul.buttons li form.addbutton input {
+  border-radius: 24px;
+  background-color: black;
+  color: white;
+  width: 10em;
+  height: 4em;
+  border-style: none;
+  font-size: 20px;
+}
+section.left
+  ul.buttons
+  li
+  form.cancelbutton
+  input {
+  border-radius: 50%;
+  background-color: black;
+  padding: 0;
+  color: white;
+  width: 4em;
+  height: 4em;
+  border-style: none;
+  font-size: 20px;
+}
+section.right form.checkout button {
+  border-radius: 45px;
+  background-color: black;
+  padding: 0;
+  color: white;
+  width: 6em;
+  height: 3em;
+  border-style: none;
+  font-size: 20px;
+  bottom: 10%;
+}
+section.right form.checkout {
+  position: absolute;
+  bottom: 10%;
+  left: 80%;
+}
+section.right table {
+  backdrop-filter: blur(21px);
+  width: 90%;
+  position: relative;
+  top: 10%;
+  border: 5px solid black;
+  margin-left: auto;
+  text-align: center;
+  margin-right: auto;
+  background-color: #fbd5c8cb;
+  border-radius: 15px;
+}
+section.right table tr:nth-child(even) {
+  background-color: #d6eeee;
+}
+
+section.right ul.idinput li form {
+  position: absolute;
+  bottom: 10%;
+}
+section.right ul.idinput li form input {
+  backdrop-filter: blur(21px);
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+section.right ul.idinput li.validity{
+  position: absolute;
+  bottom: 10%;
+}
