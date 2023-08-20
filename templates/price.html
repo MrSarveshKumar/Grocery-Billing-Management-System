@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/styles.css">
+    <title>Billing</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Billing</h1>
+    </div>
+    <section class="left">
+
+        <ul class="row">
+            <li>Code</li>
+            <li>Item</li>
+        </ul>
+        <ul class="input">
+            <li>{{code}}</li>
+            <li>{{itemname}}</li>
+        </ul>
+        <ul class="row">
+            <li>Quality</li>
+            <li>Quantity</li>
+            <li>Price</li>
+        </ul>
+        <ul class="input">
+            <li style="font-size: 80%;">{{quality}}</li>
+            <li style="font-size: 80%;">{{quantity}}</li>
+            <li style="font-size: 80%;">{{price}}</li>
+        </ul>
+        <ul class="buttons">
+            <li>
+                <form action="/add/" class="addbutton">
+                    <input type="submit" value="Add">
+                </form>
+            </li>
+            <li>
+                <form action="/" class="cancelbutton">
+                    <input type="submit" value="X">
+                </form>
+            </li>
+        </ul>
+
+    </section>
+
+
+    {% extends "common.html" %}
+</body>
+
+</html>

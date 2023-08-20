@@ -1,0 +1,46 @@
+<section class="right">
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>Code</th>
+            <th>Item name</th>
+            <th>Quality</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        {% for i in range(tablelen) %}
+
+        <tr>
+            {% for x in tabledata[i] %}
+            <td>{{x}}</td>
+            {% endfor %}
+            <td>
+                <form action="/delete/" method="POST">
+                    <button type="submit" name="delete" value="{{i}}" class="delete">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <ul class="idinput">
+        {% if hide == 0 %}
+        <li>
+            <form action="/customer/" method="POST">
+                <input type="text" name="id" placeholder="Enter customer ID">
+                <input type="submit" value="validate">
+            </form>
+        </li>
+        {% endif %}
+        {% if hide == 1 %}
+        <li class="validity">
+
+            {{validity}}
+        </li>
+        {% endif %}
+        
+    </ul>
+    <form action="/checkout/" class="checkout" method="POST">
+        <button type="submit">Checkout</button>
+    </form>
+</section>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <style>
+        body h1.heading {
+            width: 100%;
+            text-align: center;
+            font-size: 50px;
+            text-decoration: underline green;
+
+        }
+
+        div.details {
+            width: 100%;
+            text-align: center;
+        }
+
+        table tr th {
+            background-color: rgba(0, 128, 0, 0.5);
+            height: 25px;
+            font-size: 30px;
+            width: 250px;
+        }
+
+        table tr td {
+            background-color: rgba(255, 255, 255, 0.5);
+            font-size: 30px;
+            width: 250px;
+        }
+
+        .belowtable {
+            width: 100%;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">
+        BILL
+    </h1>
+    <div class="details">Customer Name: &nbsp {{customername}}</div>
+    <div class="details">Phone Number: &nbsp&nbsp&nbsp&nbsp{{phonenumber}}</div>
+
+
+    <table border="10" style="margin: auto; margin-top: 50px; margin-bottom: 50px;">
+        <tr style="text-align: center;">
+            <th> Sr.No. </th>
+            <th>Code</th>
+            <th>Item</th>
+            <th>Quality</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+
+        {% for i in tablelist %}
+
+        <tr style="text-align: center;">
+            {% for x in i %}
+            <td>{{x}}</td>
+            {% endfor %}
+        </tr>
+
+        {% endfor %}
+    </table>
+
+    <div class="belowtable">
+        <strong>Subtotal</strong>&nbsp : &nbsp &#x20B9 {{subtotal}}
+    </div>
+    <div class="belowtable">
+        <strong>Discount</strong>&nbsp: &nbsp {{discount}}%
+    </div>
+    <div class="belowtable">
+        <strong>Amount to be paid is</strong> : &nbsp &#x20B9 {{total}}
+    </div>
+    <h1 style="text-align:center;font-size:30px;">
+        <br>x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x----x
+        <br>
+    </h1>
+    <h1 style="text-align: center;color:green;font-size:40px;"><br> Thank You! </h1>
+
+    <form action="/done/" method="POST" style="width: 100%; text-align: center;">
+        <button type="submit"
+            style="border-radius:5px; padding: 10px; background-color: cornflowerblue; color: white;">Done</button>
+    </form>
+</body>
+
+</html>
